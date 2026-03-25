@@ -30,6 +30,9 @@ class RegressionLineaire():
         Y_prediction=self.predict(self.X)
 
         # calculating gradient
+        # dw = (-(2 * (self.X.T).dot(self.Y - Y_prediction)) / self.m) + (self.l2_penalty * self.w) #| for ridge regression
+        # dw = (-(2 * (self.X.T).dot(self.Y - Y_prediction)) / self.m) + (self.l1_penalty * np.sign(self.w)) #| for lasso regression 
+        
         dw = -( 2 * (self.X.T).dot(self.Y - Y_prediction)) / self.m
         db = -( 2 * np.sum(self.Y - Y_prediction)) / self.m
 
