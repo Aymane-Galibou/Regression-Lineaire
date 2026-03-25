@@ -9,10 +9,27 @@ In a standard model, the algorithm only cares about minimizing the error. Lasso 
 ### 🚀 The "Magic" of L1 Penalty
 Lasso uses what is called an **L1 Penalty** (Absolute Value). Mathematically, this specific shape has a unique property: it can force certain coefficients to become **exactly zero**.
 
-### 📊 Key Outcomes:
-* **Feature Selection:** This is Lasso’s superpower. If you have 100 input variables and 90 of them are useless noise, Lasso will ignore them entirely by setting their weights to zero.
-* **Simplicity:** It produces a "sparse" model that is much easier to interpret than a standard regression.
-* **Prevents Overfitting:** By penalizing large coefficients, it ensures the model doesn't "over-memorize" the training data ,(adding a $$\lambda penalty to the model reduce the overfitting).
+###  Key Outcomes
+
+* **✨ Automatic Feature Selection**
+    This is Lasso’s "superpower." By using an **L1 penalty**, the algorithm can shrink the coefficients of less important variables to **exactly zero**. If your dataset has 100 variables but only 10 actually drive the result, Lasso will automatically ignore the 90 "noise" variables.
+
+* **📖 Model Simplicity & Sparsity**
+    Because it forces irrelevant weights to zero, it creates a **sparse model**. This makes the final equation much shorter and easier for humans to interpret compared to a standard regression where every variable has a tiny, confusing weight.
+
+* **🛡️ Fighting Overfitting**
+    Standard regression often "over-memorizes" the training data (including the noise). Lasso prevents this by penalizing large coefficients. 
+    > **Note:** Adding a **$\lambda$ (Lambda) penalty** reduces model complexity, which effectively minimizes **overfitting** and allows the model to generalize better to new, unseen data.
+
+---
+
+### 📉 The Impact of $\lambda$ (Regularization)
+
+| Lambda ($\lambda$) | Effect on Model | Result |
+| :--- | :--- | :--- |
+| **$\lambda = 0$** | No Penalty | Standard Linear Regression (High Overfit Risk) |
+| **Low $\lambda$** | Light Shrinkage | Most features kept, weights slightly reduced |
+| **High $\lambda$** | Aggressive Shrinkage | **Feature Selection** occurs (Many weights become 0) |
 
 ---
 
