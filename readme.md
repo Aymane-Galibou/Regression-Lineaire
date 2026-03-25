@@ -9,6 +9,7 @@ In a standard model, the algorithm only cares about minimizing the error. Lasso 
 ### 🚀 The "Magic" of L1 Penalty
 Lasso uses what is called an **L1 Penalty** (Absolute Value). Mathematically, this specific shape has a unique property: it can force certain coefficients to become **exactly zero**.
 
+<<<<<<< HEAD
 ###  Key Outcomes
 
 * **✨ Automatic Feature Selection**
