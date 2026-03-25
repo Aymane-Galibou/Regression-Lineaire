@@ -12,7 +12,7 @@ Lasso uses what is called an **L1 Penalty** (Absolute Value). Mathematically, th
 ### 📊 Key Outcomes:
 * **Feature Selection:** This is Lasso’s superpower. If you have 100 input variables and 90 of them are useless noise, Lasso will ignore them entirely by setting their weights to zero.
 * **Simplicity:** It produces a "sparse" model that is much easier to interpret than a standard regression.
-* **Prevents Overfitting:** By penalizing large coefficients, it ensures the model doesn't "over-memorize" the training data ,(adding a $$\lambda penalty to the model reduce the overfitting).
+* **Prevents Overfitting:** By penalizing large coefficients, it ensures the model doesn't "over-memorize" the training data ,adding a $$\lambda penalty to the model reduce the overfitting.
 
 ---
 
